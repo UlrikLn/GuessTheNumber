@@ -12,7 +12,7 @@ function start() {
 }
 
 function generateRandomNumber(){
-    return 42;
+    return Math.floor(Math.random() * 99) + 1
 }
 
 function receiveGuess(event){
@@ -22,6 +22,7 @@ function receiveGuess(event){
     const value = form.guess.valueAsNumber;
     console.log("Revieved guess");
     console.log(value);
+    form.guess.value = "";
     checkGuess(value);
 }
 
